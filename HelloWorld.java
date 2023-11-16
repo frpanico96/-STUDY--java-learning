@@ -95,6 +95,55 @@ public class HelloWorld {
     System.out.println("Popping stack...");
     stackInt.pop();
     System.out.println("Top Item: " + stackInt.peek());
+
+    // Queue
+    // FIFO principle
+    // Scheduling
+    // Mantaining Playlist
+    // Interrupting handling
+    // enqueue(), dequeue(), peekfirst(), peeklast()
+    class QueueInt {
+      LinkedList<Integer> queue = new LinkedList<Integer>();
+
+      void enqueue(int newElement) {
+        queue.addLast(newElement);
+      }
+
+      int dequeue() {
+        if (queue.isEmpty()) {
+          return -1;
+        }
+        int x = queue.getFirst();
+        queue.removeFirst();
+        return x;
+      }
+
+      int peekFirst() {
+        return queue.getFirst();
+      }
+
+      int peekLast() {
+        return queue.peekLast();
+      }
+    }
+
+    QueueInt queue = new QueueInt();
+    System.out.println("Adding element to queue");
+    queue.enqueue(1);
+    System.out.println("Head of queue: " + queue.peekFirst());
+    System.out.println("Adding element to queue");
+    queue.enqueue(2);
+    System.out.println("Head of queue: " + queue.peekFirst());
+    System.out.println("Tail of queue: " + queue.peekLast());
+    System.out.println("Adding element to queue");
+    queue.enqueue(3);
+    System.out.println("Head of queue: " + queue.peekFirst());
+    System.out.println("Tail of queue: " + queue.peekLast());
+    System.out.println("Dequeueing: " + queue.dequeue());
+    System.out.println("Dequeueing: " + queue.dequeue());
+    System.out.println("Dequeueing: " + queue.dequeue());
+    System.out.println("Dequeueing: " + queue.dequeue());
+    System.out.println("Dequeueing: " + queue.dequeue());
   }
 
 }
