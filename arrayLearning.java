@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class arrayLearning extends DsaBaseClass {
+public class ArrayLearning extends DsaBaseClass {
   /**
    * Linear Data Structure
    * Contiguos memory location
@@ -21,7 +21,16 @@ public class arrayLearning extends DsaBaseClass {
    * 2D can be related to a table or matrix
    * Elements are store one after the other
    * Two subscripts or indeces are use
-   *
+   * *********************
+   * Advantages
+   * Random Access elements
+   * Easy sorting and searching
+   * Replacement of multiple variables
+   * *********************
+   * Size is fixed
+   * Difficult to insert and delete
+   * if capacity is more and occupancy is less, most of the array gets wasted
+   * Needs contiguous memory
    */
 
   @Override
