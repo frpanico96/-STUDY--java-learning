@@ -6,6 +6,8 @@ public class Dsa {
     DsaBaseClass stack = new StackLearning();
     DsaBaseClass queue = new QueueLearning();
     DsaBaseClass linkedList = new LinkedListLearning();
+    DsaBaseClass binaryTree = new BinaryTreeLearning();
+    DsaBaseClass binarySearchTree = new BinarySearchTreeLearning();
 
     System.out.println("#################");
     System.out.println("##### Array #####");
@@ -19,5 +21,11 @@ public class Dsa {
     System.out.println("#################");
     System.out.println("##### LinkedList #####");
     linkedList.excercise();
+    System.out.println("#################");
+    System.out.println("##### Binary tree #####");
+    binaryTree.excercise();
+    System.out.println("#################");
+    System.out.println("##### Binary Search tree #####");
+    binarySearchTree.excercise();
   }
 }
