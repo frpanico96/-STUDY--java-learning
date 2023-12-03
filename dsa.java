@@ -8,6 +8,8 @@ public class Dsa {
     DsaBaseClass linkedList = new LinkedListLearning();
     DsaBaseClass binaryTree = new BinaryTreeLearning();
     DsaBaseClass binarySearchTree = new BinarySearchTreeLearning();
+    DsaBaseClass graph = new GraphLearning();
+    DsaBaseClass hash = new HashLearning();
 
     System.out.println("#################");
     System.out.println("##### Array #####");
@@ -27,5 +29,11 @@ public class Dsa {
     System.out.println("#################");
     System.out.println("##### Binary Search tree #####");
     binarySearchTree.excercise();
+    System.out.println("#################");
+    System.out.println("##### Graph #####");
+    graph.excercise();
+    System.out.println("#################");
+    System.out.println("##### Hash #####");
+    hash.excercise();
   }
 }
