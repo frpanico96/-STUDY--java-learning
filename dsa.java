@@ -10,6 +10,7 @@ public class Dsa {
     DsaBaseClass binarySearchTree = new BinarySearchTreeLearning();
     DsaBaseClass graph = new GraphLearning();
     DsaBaseClass hash = new HashLearning();
+    DsaBaseClass searchAlgo = new SearchAlgoLearning();
 
     System.out.println("#################");
     System.out.println("##### Array #####");
@@ -35,5 +36,8 @@ public class Dsa {
     System.out.println("#################");
     System.out.println("##### Hash #####");
     hash.excercise();
+    System.out.println("#################");
+    System.out.println("##### Search Algorithms #####");
+    searchAlgo.excercise();
   }
 }
