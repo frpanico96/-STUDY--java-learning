@@ -11,6 +11,7 @@ public class Dsa {
     DsaBaseClass graph = new GraphLearning();
     DsaBaseClass hash = new HashLearning();
     DsaBaseClass searchAlgo = new SearchAlgoLearning();
+    DsaBaseClass sortingAlgo = new SortAlgoLearning();
 
     System.out.println("#################");
     System.out.println("##### Array #####");
@@ -39,5 +40,8 @@ public class Dsa {
     System.out.println("#################");
     System.out.println("##### Search Algorithms #####");
     searchAlgo.excercise();
+    System.out.println("#################");
+    System.out.println("##### Sorting Algorithms #####");
+    sortingAlgo.excercise();
   }
 }
