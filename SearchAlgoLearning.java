@@ -59,8 +59,8 @@ public class SearchAlgoLearning extends DsaBaseClass {
     int[] a1 = new int[] { 6, 4, 3, 5, 8, 1, 2 };
     int[] a2 = new int[] { 10, 20, 30, 40, 50, 60 };
     Scanner s1 = new Scanner(System.in);
-    System.out.print("Enter element to search: ");
-    int key = s1.nextInt();
+    // System.out.print("Enter element to search: ");
+    int key = 2;
     System.out.println("[Linear Search] Element is at index: " + linearSearch(a1, key));
     System.out.println("[Binary Search] Element is at index: " + binarySearch(a2, key, 0, a2.length - 1));
     s1.close();
