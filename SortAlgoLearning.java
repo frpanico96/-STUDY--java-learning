@@ -73,6 +73,28 @@ public class SortAlgoLearning extends DsaBaseClass {
    * Space complexity: O(n) basic appoach, O(logn) modified approach
    * Unstable algorithm
    * Inplace: No extra/ausiliary memory needed
+   * *********************
+   * Merge Sort
+   * The problem is divided in two subproblems in each iteration
+   * efficiency is increased drastically
+   * divide and conquer approach
+   * 
+   * mergeSort(arr, left, right)
+   * if left >= right
+   * return
+   * mid = (left + right)/2
+   * mergeSort(arr, left, mid)
+   * mergeSort(arr, mid, right)
+   * merg(arr, left, mid + 1, right)
+   * 
+   * Merge
+   * Create 2 subarrays Left and Right
+   * Create 3 iterator i, j, k
+   * Insert elements in Left and Right (i & j)
+   * k - replace values in the original array
+   * Pick lerger element from Left and Right and place in the correct position
+   * If no elements in Left or Right
+   * insert remaining element in original array
    */
   @Override
   public void excercise() {
@@ -90,6 +112,9 @@ public class SortAlgoLearning extends DsaBaseClass {
     quickSort(arrayToSort, 0, arrayToSort.length - 1);
     printArray(arrayToSort);
     arrayToSort = a1.clone();
+    System.out.print("[Merge Sort] Sorted Array: ");
+    mergeSort(arrayToSort, 0, arrayToSort.length - 1);
+    printArray(arrayToSort);
   }
 
   void insertionSort(int[] arr) {
@@ -142,6 +167,52 @@ public class SortAlgoLearning extends DsaBaseClass {
     arr[end] = arr[pIndex + 1];
     arr[pIndex + 1] = pivot;
     return pIndex + 1;
+  }
+
+  void mergeSort(int[] arr, int start, int end) {
+    if (start >= end) {
+      return;
+    }
+    int mid = (start + end) / 2;
+    mergeSort(arr, start, mid);
+    mergeSort(arr, mid + 1, end);
+    merge(arr, start, mid, end);
+  }
+
+  void merge(int[] arr, int start, int mid, int end) {
+    int i, j, k;
+    int lsize = mid - start + 1;
+    int rsize = end - mid;
+    int[] left = new int[lsize];
+    int[] right = new int[rsize];
+    for (i = 0; i < left.length; ++i) {
+      left[i] = arr[start + i];
+    }
+    for (j = 0; j < right.length; ++j) {
+      right[j] = arr[mid + 1 + j];
+    }
+    i = j = 0;
+    k = start;
+    while (i < lsize && j < rsize) {
+      if (left[i] <= right[j]) {
+        arr[k] = left[i];
+        ++i;
+      } else {
+        arr[k] = right[j];
+        ++j;
+      }
+      ++k;
+    }
+    while (i < lsize) {
+      arr[k] = left[i];
+      i++;
+      k++;
+    }
+    while (j < rsize) {
+      arr[k] = right[j];
+      j++;
+      k++;
+    }
   }
 
   void printArray(int[] arr) {
