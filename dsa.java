@@ -12,6 +12,8 @@ public class Dsa {
     DsaBaseClass hash = new HashLearning();
     DsaBaseClass searchAlgo = new SearchAlgoLearning();
     DsaBaseClass sortingAlgo = new SortAlgoLearning();
+    DsaBaseClass primMinimalSpanningTreeAlgo = new PrimMinimalSpanningTreeAlgo();
+    DsaBaseClass towerOfHanoi = new TowerOfHanoiAlgo();
 
     System.out.println("#################");
     System.out.println("##### Array #####");
@@ -43,5 +45,11 @@ public class Dsa {
     System.out.println("#################");
     System.out.println("##### Sorting Algorithms #####");
     sortingAlgo.excercise();
+    System.out.println("#################");
+    System.out.println("##### Prim's minimal spanning tree Algorithm #####");
+    primMinimalSpanningTreeAlgo.excercise();
+    System.out.println("#################");
+    System.out.println("##### Tower of Hanoi Algorithm #####");
+    towerOfHanoi.excercise();
   }
 }
