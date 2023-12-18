@@ -1,3 +1,5 @@
+package DSA;
+
 public class QueueLearning extends DsaBaseClass {
   /**
    * Linear Data Structure
