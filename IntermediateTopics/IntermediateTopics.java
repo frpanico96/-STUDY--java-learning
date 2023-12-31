@@ -9,6 +9,7 @@ public class IntermediateTopics {
     // BasicExcerices socketLearning = new SocketLearning();
     BasicExcerices generics = new GenericsLearning();
     BasicExcerices streams = new StreamLearning();
+    BasicExcerices threads = new ThreadLearning();
 
     System.out.println("#### Serialization learning ####");
     serialization.exercise();
@@ -18,5 +19,7 @@ public class IntermediateTopics {
     generics.exercise();
     System.out.println("#### Stream learning ####");
     streams.exercise();
+    System.out.println("#### Thread learning ####");
+    threads.exercise();
   }
 }
